@@ -7,7 +7,7 @@ public class TestCase_Two extends TestParent {
     String url = "https://www.northwesternmutual.com/";
 
     @Test
-    public void tc001_(){
+    public void tc001_verify(){
         driver.navigate().to(url);
     }
 }
