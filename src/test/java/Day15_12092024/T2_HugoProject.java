@@ -40,4 +40,6 @@ public class T2_HugoProject extends TestParent {
         //click on premium cabin
         ReuasableMethodsLoggers.clickMethod(driver, "//*[text() = 'Premium cabin']", logger, "PremiumCabin");
     }//end of test case 2
+
+    // Hello
 }
