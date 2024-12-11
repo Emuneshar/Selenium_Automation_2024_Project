@@ -16,4 +16,5 @@ public class TestCase_Two extends TestParent {
         ReuasableMethodsLoggers.clickMethod(driver, xpathCollegeSavings, logger, "College Savings");
         Thread.sleep(4000);
     }
+
 }
