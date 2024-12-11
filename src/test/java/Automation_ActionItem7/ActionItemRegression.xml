@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <test name="TriageRegression" preserve-order="true">
+        <classes>
+            <class name="Automation_ActionItem7.TestCase_One" />
+
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

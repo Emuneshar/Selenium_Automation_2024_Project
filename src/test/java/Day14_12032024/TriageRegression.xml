@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <test name="TriageRegression" preserve-order="true">
+        <classes>
+            <class name="Day14_12032024.T1_Google_Inheritcance_With_Logger" />
+            <class name="Day14_12032024.T2_Yahoo_Booleans" />
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
