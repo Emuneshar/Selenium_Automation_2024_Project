@@ -9,6 +9,7 @@ public class TestCase_Two extends TestParent {
     String xpathFinancialPlanning = "//*[@id = 'nmx-nav-link-primary-financial-planning']";
     String xpathCollegeSavings = "//*[@id = 'nmx-nav-link-primary-sub-college-savings-plans']";
     String xpathStartPlanning = "//*[@id = 'college-savings-plans-page-flexible-hero-cta-primary']";
+    String xpathSaveForCollege = "//*[@id = 'fafa-interactive-flow-goal-card-save-for-college']";
 
     @Test
     public void tc001_verifyConnectToAdvisor() throws InterruptedException {
@@ -16,6 +17,7 @@ public class TestCase_Two extends TestParent {
         ReuasableMethodsLoggers.mouseActionHover(driver, xpathFinancialPlanning, logger, "Financial Planning Menu");
         ReuasableMethodsLoggers.clickMethod(driver, xpathCollegeSavings, logger, "College Savings");
         ReuasableMethodsLoggers.clickMethod(driver, xpathStartPlanning, logger, "Start Planning");
+        ReuasableMethodsLoggers.clickMethod(driver, xpathSaveForCollege, logger, "Save for College");
         Thread.sleep(4000);
     }
 
