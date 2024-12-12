@@ -6,20 +6,18 @@ import org.testng.annotations.Test;
 
 public class TestCase_Two extends TestParent {
     String url = "https://www.northwesternmutual.com/";
-    String xpathFinancialPlanning = "//*[@id = 'nmx-nav-link-primary-investments']";
-    String xpathCollegeSavings = "//*[@id = 'nmx-nav-link-primary-sub-investments-private-wealth-management']";
-    String xpathStartPlanning = "//*[@id = 'college-savings-plans-page-flexible-hero-cta-primary']";
-    //String xpathSaveFoorCollege = "//*[@id = 'fafa-interactive-flow-goal-card-save-for-college']";
-    String xpathSaveForCollege = "//*[@id='fafa-interactive-flow-goal-card-save-for-college']";
-
-    String xpathNext = "//*[@id = 'in-page-lead-step-1-next-button']";
+    String xpathInvestments = "//*[@id = 'nmx-nav-link-primary-investments']";
+    String xpathWealthManagement = "//*[@id = 'nmx-nav-link-primary-sub-investments-private-wealth-management']";
+    String xpathFindClientGroup = "//*[@id = 'private-wealth-management-pcg-directory-cta']";
 
     @Test
     public void tc001_verifyPrivateWealthManagementPartners() throws InterruptedException {
         driver.navigate().to(url);
-        ReuasableMethodsLoggers.mouseActionHover(driver, xpathFinancialPlanning, logger, "Financial Planning Menu");
-        ReuasableMethodsLoggers.clickMethod(driver, xpathCollegeSavings, logger, "College Savings");
-        
+        ReuasableMethodsLoggers.mouseActionHover(driver, xpathInvestments, logger, "Financial Planning Menu");
+        ReuasableMethodsLoggers.clickMethod(driver, xpathWealthManagement, logger, "College Savings");
+        Thread.sleep(3000);
+        ReuasableMethodsLoggers.scrollByPixel(driver, 0, 300, logger);
+        ReuasableMethodsLoggers.clickMethod(driver, xpathFindClientGroup, logger, "Find A Private Client Group Advisor");
         Thread.sleep(4000);
     }
 
