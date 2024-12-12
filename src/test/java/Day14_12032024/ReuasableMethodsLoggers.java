@@ -55,6 +55,7 @@ public class ReuasableMethodsLoggers {
             WebDriverWait pause = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement name = driver.findElements(By.xpath(xpath)).get(index);
             text = name.getText();
+            System.out.println(text);
             logger.log(LogStatus.PASS, "Successfully captured text with index from " + elementName);
         } catch (Exception e) {
             System.out.println("Sorry couldn't get the " + e);

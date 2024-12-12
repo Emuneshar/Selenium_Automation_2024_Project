@@ -9,6 +9,8 @@ public class TestCase_Two extends TestParent {
     String xpathInvestments = "//*[@id = 'nmx-nav-link-primary-investments']";
     String xpathWealthManagement = "//*[@id = 'nmx-nav-link-primary-sub-investments-private-wealth-management']";
     String xpathFindClientGroup = "//*[@id = 'private-wealth-management-pcg-directory-cta']";
+    String xpathSelectAState = "//*[@id = 'private-wealth-management-pcg-directory-select']";
+    String xpathResults = "//*[@class = 'sc-gJryWy leQuMl']";
 
     @Test
     public void tc001_verifyPrivateWealthManagementPartners() throws InterruptedException {
@@ -18,6 +20,8 @@ public class TestCase_Two extends TestParent {
         Thread.sleep(3000);
         ReuasableMethodsLoggers.scrollByPixel(driver, 0, 300, logger);
         ReuasableMethodsLoggers.clickMethod(driver, xpathFindClientGroup, logger, "Find A Private Client Group Advisor");
+        ReuasableMethodsLoggers.selectByText(driver, xpathSelectAState, "New York",logger);
+        ReuasableMethodsLoggers.captureText(driver, xpathResults, logger, "Results");
         Thread.sleep(4000);
     }
 
