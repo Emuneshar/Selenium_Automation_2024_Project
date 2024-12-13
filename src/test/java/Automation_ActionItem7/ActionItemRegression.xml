@@ -3,8 +3,14 @@
 <suite name="Regression Suite">
     <test name="TriageRegression" preserve-order="true">
         <classes>
+
+            <!-- Test Class One -->
             <class name="Automation_ActionItem7.TestCase_One" />
+
+            <!-- Test Class Two -->
             <class name="Automation_ActionItem7.TestCase_Two"/>
+
+
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
