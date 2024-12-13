@@ -29,7 +29,7 @@ public class TestCase_Two extends TestParent {
             "Scholar Financial Group\n" +
             "SFG Wealth Management\n" +
             "Shields, Tim\n" +
-            "Small World Wealth Management\n" +
+            "Small World Wealth Managemeent\n" +
             "Smith, Brad\n" +
             "Spring Street Financial\n" +
             "Stein, Kevin\n" +
