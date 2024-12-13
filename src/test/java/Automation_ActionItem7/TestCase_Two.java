@@ -59,6 +59,8 @@ public class TestCase_Two extends TestParent {
         driver.navigate().to(url);
         ReuasableMethodsLoggers.mouseActionHover(driver, xpathFinancialPlanning, logger, "Financial Planning");
         ReuasableMethodsLoggers.clickMethod(driver, xpathEstatePlanning, logger, "Estate Planning");
+        Thread.sleep(4000);
+        ReuasableMethodsLoggers.scrollByPixel(driver, 0, 1000, logger);
         ReuasableMethodsLoggers.clickMethod(driver, xpathWhoNeedsEstatePlanning, logger, "Who needs estate planning");
         Thread.sleep(4000);
     }

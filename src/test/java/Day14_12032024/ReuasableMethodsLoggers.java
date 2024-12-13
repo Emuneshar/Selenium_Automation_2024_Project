@@ -101,6 +101,12 @@ public class ReuasableMethodsLoggers {
     }
 
 
+    public static void scrollByElement(WebDriver driver, String xpath, ExtentTest logger, String elementName){
+
+        WebElement scrollTo = driver.findElement(By.xpath(xpath));
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].scrollIntoView(true);", scrollTo);
+    }
 
 
 
