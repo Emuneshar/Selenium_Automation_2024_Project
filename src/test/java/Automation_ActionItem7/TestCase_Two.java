@@ -11,6 +11,8 @@ public class TestCase_Two extends TestParent {
     String xpathFindClientGroup = "//*[@id = 'private-wealth-management-pcg-directory-cta']";
     String xpathSelectAState = "//*[@id = 'private-wealth-management-pcg-directory-select']";
     String xpathResults = "//*[@class = 'sc-gJryWy leQuMl']";
+    String xpathFinancialPlanning = "//*[@id = 'nmx-nav-link-primary-financial-planning']";
+    String xpathEstatePlanning = "//*[@id = 'nmx-nav-link-primary-sub-estate-planning']";
     String expectedResult = "Aspen Park Financial\n" +
             "Blue Column Capital\n" +
             "Cannataro Family Capital Partners\n" +
@@ -29,7 +31,7 @@ public class TestCase_Two extends TestParent {
             "Scholar Financial Group\n" +
             "SFG Wealth Management\n" +
             "Shields, Tim\n" +
-            "Small World Wealth Managemeent\n" +
+            "Small World Wealth Management\n" +
             "Smith, Brad\n" +
             "Spring Street Financial\n" +
             "Stein, Kevin\n" +
@@ -49,7 +51,13 @@ public class TestCase_Two extends TestParent {
         ReuasableMethodsLoggers.selectByText(driver, xpathSelectAState, "New York",logger);
         String actualResult = ReuasableMethodsLoggers.captureText(driver, xpathResults, logger, "Results");
         assertEqualsLogger(actualResult, expectedResult);
-        Thread.sleep(4000);
+    }
+
+    @Test
+    public void tc002_WhoNeedsAnEstatePlan(){
+        driver.navigate().to(url);
+        ReuasableMethodsLoggers.mouseActionHover(driver, xpathFinancialPlanning, logger, "Financial Planning");
+        ReuasableMethodsLoggers.clickMethod(driver, xpathEstatePlanning, logger, "Estate Planning");
 
     }
 
