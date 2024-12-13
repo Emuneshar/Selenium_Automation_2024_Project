@@ -105,6 +105,7 @@ public class ReuasableMethodsLoggers {
         try{WebElement scrollTo = driver.findElement(By.xpath(xpath));
             JavascriptExecutor jse = (JavascriptExecutor) driver;
             jse.executeScript("arguments[0].scrollIntoView(true);", scrollTo);
+            logger.log(LogStatus.PASS, "Successfully scrolled to " + elementName);
         } catch (Exception e) {
             logger.log(LogStatus.FAIL, "Couldn't scroll to item" + elementName);
         }
