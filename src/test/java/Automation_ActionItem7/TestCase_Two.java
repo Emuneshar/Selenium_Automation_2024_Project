@@ -16,7 +16,7 @@ public class TestCase_Two extends TestParent {
     public void tc001_verifyPrivateWealthManagementPartners() throws InterruptedException {
         driver.navigate().to(url);
         ReuasableMethodsLoggers.mouseActionHover(driver, xpathInvestments, logger, "Investments");
-        ReuasableMethodsLoggers.clickMethod(driver, xpathWealthManagement, logger, "College Savings");
+        ReuasableMethodsLoggers.clickMethod(driver, xpathWealthManagement, logger, "Private Wealth Management");
         Thread.sleep(3000);
         ReuasableMethodsLoggers.scrollByPixel(driver, 0, 300, logger);
         ReuasableMethodsLoggers.clickMethod(driver, xpathFindClientGroup, logger, "Find A Private Client Group Advisor");
