@@ -13,6 +13,7 @@ public class TestCase_Two extends TestParent {
     String xpathResults = "//*[@class = 'sc-gJryWy leQuMl']";
     String xpathFinancialPlanning = "//*[@id = 'nmx-nav-link-primary-financial-planning']";
     String xpathEstatePlanning = "//*[@id = 'nmx-nav-link-primary-sub-estate-planning']";
+    String xpathPopupClose = "//*[@id = 'onetrust-accept-btn-handler']";
     String xpathWhoNeedsEstatePlanning = "//*[@id = 'dt-title-estate-planning-faq-who-needs-faq']";
     String expectedResult = "Aspen Park Financial\n" +
             "Blue Column Capital\n" +
@@ -60,8 +61,10 @@ public class TestCase_Two extends TestParent {
         ReuasableMethodsLoggers.mouseActionHover(driver, xpathFinancialPlanning, logger, "Financial Planning");
         ReuasableMethodsLoggers.clickMethod(driver, xpathEstatePlanning, logger, "Estate Planning");
         Thread.sleep(4000);
-        ReuasableMethodsLoggers.scrollByPixel(driver, 0, 1000, logger);
+        ReuasableMethodsLoggers.clickMethod(driver, xpathPopupClose, logger,"Close pop up");
+        ReuasableMethodsLoggers.scrollByPixel(driver, 0, 900, logger);
         ReuasableMethodsLoggers.clickMethod(driver, xpathWhoNeedsEstatePlanning, logger, "Who needs estate planning");
+        ReuasableMethodsLoggers.scrollByPixel(driver, 0, 200, logger);
         Thread.sleep(4000);
     }
 
