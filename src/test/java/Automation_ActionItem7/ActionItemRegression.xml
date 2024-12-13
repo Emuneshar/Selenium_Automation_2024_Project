@@ -5,10 +5,10 @@
         <classes>
 
             <!-- Test Class One -->
-            <class name="Automation_ActionItem7.TestCase_One" />
+            <class name="Automation_ActionItem7.TestClass_One" />
 
             <!-- Test Class Two -->
-            <class name="Automation_ActionItem7.TestCase_Two"/>
+            <class name="Automation_ActionItem7.TestClass_Two"/>
 
 
         </classes>

@@ -4,7 +4,7 @@ import Day13_12022024.TestParent;
 import Day14_12032024.ReuasableMethodsLoggers;
 import org.testng.annotations.Test;
 
-public class TestCase_One extends TestParent {
+public class TestClass_One extends TestParent {
 
     // Strings and xpath storage
     String url = "https://www.northwesternmutual.com/";
