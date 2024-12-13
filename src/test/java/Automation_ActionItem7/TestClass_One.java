@@ -59,6 +59,8 @@ public class TestClass_One extends TestParent {
         ReuasableMethodsLoggers.clickMethodWithIndex(driver, xpathGroupCoverage, 1,logger, "Group Coverage"); // click on group coverage
         ReuasableMethodsLoggers.clickMethod(driver, xpathGroupCoverageChoice, logger, "Choice"); // click on choice
         ReuasableMethodsLoggers.clickMethod(driver, xpathNextButton, logger, "Next button"); // click on next button
+        String estimate = ReuasableMethodsLoggers.captureText(driver, xpathEstimate, logger, "Estimate");
+        System.out.println("Calculation successful, estimate is " + estimate);
     } // End of test case 3
 
 } // End of Test class
