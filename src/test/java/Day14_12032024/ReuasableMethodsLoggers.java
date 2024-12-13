@@ -38,6 +38,7 @@ public class ReuasableMethodsLoggers {
             WebElement name = pause.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             text = name.getText();
             logger.log(LogStatus.PASS, "Successfully captured text from " + elementName);
+            System.out.println(text);
         } catch (Exception e) {
             System.out.println("Sorry, couldn't get the " + e);
             logger.log(LogStatus.FAIL, "Couldn't get the text from " + elementName);
