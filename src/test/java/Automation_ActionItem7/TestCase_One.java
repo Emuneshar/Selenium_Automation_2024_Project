@@ -24,7 +24,7 @@ public class TestCase_One extends TestParent {
 
 
     @Test(priority = 1)
-    public void tc001_enterAgeAndGender() throws InterruptedException {
+    public void tc001_enterAgeAndGender(){
         driver.navigate().to(url);
         ReuasableMethodsLoggers.mouseActionHover(driver, xpathForMenu, logger, "Insurance Menu");
         ReuasableMethodsLoggers.clickMethod(driver, xpathForDisabilityCalculator, logger, "Disability Calculator");
@@ -58,8 +58,6 @@ public class TestCase_One extends TestParent {
         ReuasableMethodsLoggers.clickMethod(driver, xpathGroupCoverageChoice, logger, "Choice");
         ReuasableMethodsLoggers.clickMethod(driver, xpathNextButton, logger, "Next button");
         String estimate = ReuasableMethodsLoggers.captureText(driver, xpathEstimate, logger, "Price");
-        System.out.println(estimate);
-        Thread.sleep(4000);
     }
 
 

@@ -14,7 +14,7 @@ public class TestCase_Two extends TestParent {
     String xpathFinancialPlanning = "//*[@id = 'nmx-nav-link-primary-financial-planning']";
     String xpathEstatePlanning = "//*[@id = 'nmx-nav-link-primary-sub-estate-planning']";
     String xpathPopupClose = "//*[@id = 'onetrust-accept-btn-handler']";
-    String xpathWhoNeedsEstatePlanning = "//*[@id = 'dt-title-estate-planning-faq-who-needs-faq']";
+    String xpathAboutPlanning = "//*[@id = 'hero-description-text-estate-planning-hero']";
     String expectedResult = "Aspen Park Financial\n" +
             "Blue Column Capital\n" +
             "Cannataro Family Capital Partners\n" +
@@ -42,6 +42,8 @@ public class TestCase_Two extends TestParent {
             "The Anderson Financial Group\n" +
             "The Atrium Financial Group";
 
+    String textToCompare = "Having a plan for your estate—your home, your wealth, your possessions-means you can leave the legacy you want, whether that's to help your family, a charity, or an institution.";
+
     @Test
     public void tc001_verifyPrivateWealthManagementPartners() throws InterruptedException {
         driver.navigate().to(url);
@@ -62,10 +64,8 @@ public class TestCase_Two extends TestParent {
         ReuasableMethodsLoggers.clickMethod(driver, xpathEstatePlanning, logger, "Estate Planning");
         Thread.sleep(4000);
         ReuasableMethodsLoggers.clickMethod(driver, xpathPopupClose, logger,"Close pop up");
-        ReuasableMethodsLoggers.scrollByPixel(driver, 0, 900, logger);
-        ReuasableMethodsLoggers.clickMethod(driver, xpathWhoNeedsEstatePlanning, logger, "Who needs estate planning");
-        ReuasableMethodsLoggers.scrollByPixel(driver, 0, 200, logger);
-        Thread.sleep(4000);
+        String actualText = ReuasableMethodsLoggers.captureText(driver, xpathAboutPlanning, logger, "Text to check");
+        assertEqualsLogger(actualText, textToCompare);
     }
 
 }
