@@ -102,10 +102,13 @@ public class ReuasableMethodsLoggers {
 
 
     public static void scrollByElement(WebDriver driver, String xpath, ExtentTest logger, String elementName){
+        try{WebElement scrollTo = driver.findElement(By.xpath(xpath));
+            JavascriptExecutor jse = (JavascriptExecutor) driver;
+            jse.executeScript("arguments[0].scrollIntoView(true);", scrollTo);
+        } catch (Exception e) {
+            logger.log(LogStatus.FAIL, "Couldn't scroll to item" + elementName);
+        }
 
-        WebElement scrollTo = driver.findElement(By.xpath(xpath));
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("arguments[0].scrollIntoView(true);", scrollTo);
     }
 
 
