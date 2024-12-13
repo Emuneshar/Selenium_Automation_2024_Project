@@ -13,6 +13,7 @@ public class TestCase_Two extends TestParent {
     String xpathResults = "//*[@class = 'sc-gJryWy leQuMl']";
     String xpathFinancialPlanning = "//*[@id = 'nmx-nav-link-primary-financial-planning']";
     String xpathEstatePlanning = "//*[@id = 'nmx-nav-link-primary-sub-estate-planning']";
+    String xpathWhoNeedsEstatePlanning = "//*[@id = 'dt-title-estate-planning-faq-who-needs-faq']";
     String expectedResult = "Aspen Park Financial\n" +
             "Blue Column Capital\n" +
             "Cannataro Family Capital Partners\n" +
@@ -54,11 +55,12 @@ public class TestCase_Two extends TestParent {
     }
 
     @Test
-    public void tc002_WhoNeedsAnEstatePlan(){
+    public void tc002_WhoNeedsAnEstatePlan() throws InterruptedException {
         driver.navigate().to(url);
         ReuasableMethodsLoggers.mouseActionHover(driver, xpathFinancialPlanning, logger, "Financial Planning");
         ReuasableMethodsLoggers.clickMethod(driver, xpathEstatePlanning, logger, "Estate Planning");
-
+        ReuasableMethodsLoggers.clickMethod(driver, xpathWhoNeedsEstatePlanning, logger, "Who needs estate planning");
+        Thread.sleep(4000);
     }
 
 }
