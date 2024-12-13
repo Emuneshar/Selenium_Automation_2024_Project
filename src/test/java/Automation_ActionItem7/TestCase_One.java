@@ -53,13 +53,12 @@ public class TestCase_One extends TestParent {
     // Test case 3 depends on test case 2
     @Test(dependsOnMethods = "tc002_enterIncomeExpensesSavings")
     public void tc003_getEstimate() throws InterruptedException {
-        ReuasableMethodsLoggers.clickMethodWithIndex(driver, xpathJobDescription, 0, logger, "Description Type");
-        ReuasableMethodsLoggers.clickMethod(driver, xpathDescriptionType, logger, "Description type");
-        Thread.sleep(2000);
-        ReuasableMethodsLoggers.clickMethodWithIndex(driver, xpathGroupCoverage, 1,logger, "Group Coverage");
-        ReuasableMethodsLoggers.clickMethod(driver, xpathGroupCoverageChoice, logger, "Choice");
-        ReuasableMethodsLoggers.clickMethod(driver, xpathNextButton, logger, "Next button");
-        String estimate = ReuasableMethodsLoggers.captureText(driver, xpathEstimate, logger, "Price");
+        ReuasableMethodsLoggers.clickMethodWithIndex(driver, xpathJobDescription, 0, logger, "Description Type"); // clicks on the job description field
+        ReuasableMethodsLoggers.clickMethod(driver, xpathDescriptionType, logger, "Description type"); // clicks on which job type to enter
+        Thread.sleep(2000); // Sleep due HTML being dynamically changed
+        ReuasableMethodsLoggers.clickMethodWithIndex(driver, xpathGroupCoverage, 1,logger, "Group Coverage"); // click on group coverage
+        ReuasableMethodsLoggers.clickMethod(driver, xpathGroupCoverageChoice, logger, "Choice"); // click on choice
+        ReuasableMethodsLoggers.clickMethod(driver, xpathNextButton, logger, "Next button"); // click on next button
     } // End of test case 3
 
 }

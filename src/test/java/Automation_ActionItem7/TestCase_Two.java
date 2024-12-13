@@ -35,7 +35,7 @@ public class TestCase_Two extends TestParent {
             "Pioneer Financial\n" +
             "Point Wealth Management\n" +
             "Scholar Financial Group\n" +
-            "SFG Wealth Management\n" +
+            "SFG Wealth Management" +
             "Shields, Tim\n" +
             "Small World Wealth Management\n" +
             "Smith, Brad\n" +
@@ -44,7 +44,7 @@ public class TestCase_Two extends TestParent {
             "Strategic Planning Associates\n" +
             "Tennant Financial\n" +
             "The Anderson Financial Group\n" +
-            "The Atrium Financial Group";
+            "The Atrium Financial Group"; // will fail due to missing new line on line 38
 
     String textToCompare = "Having a plan for your estate—your home, your wealth, your possessions-means you can leave the legacy you want, whether that's to help your family, a charity, or an institution.";
     String textFromBrokerageAccount = "Questions about brokerage accounts and services? We've got answers.";
