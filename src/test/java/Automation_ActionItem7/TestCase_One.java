@@ -61,4 +61,4 @@ public class TestCase_One extends TestParent {
         ReuasableMethodsLoggers.clickMethod(driver, xpathNextButton, logger, "Next button"); // click on next button
     } // End of test case 3
 
-}
+} // End of Test class
