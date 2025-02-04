@@ -1,17 +1,14 @@
-package Day13_12022024;
+package ReusableLibraries;
 
-import Day11_11252024.ReuasbleMethods;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
 import java.lang.reflect.Method;
 
 public class TestParent {
-
     public static WebDriver driver;
 
     // Creates a public instance of the extentreport class
@@ -30,15 +27,13 @@ public class TestParent {
 
     @BeforeClass
     public void setUpChromeDriver(){
-        driver = ReuasbleMethods.setup();
+        driver = ReusableMethodsLogger_POM.setUpChromeDriver();
     }//end of before class
 
     @BeforeMethod
     public void setTestName(Method methodName) {
         logger = report.startTest(methodName.getName());
     }//end of before method
-
-
 
     @AfterClass
     public void cleanUpDriver(){
@@ -50,10 +45,6 @@ public class TestParent {
         //flush out the report
         report.flush();
     }//end of aftersuite
-
-
-
-
 
 
     public static void assertEqualsLogger(String actual, String expected){
@@ -77,4 +68,7 @@ public class TestParent {
             Assert.assertFalse(bool);
         }
     }
+
+
+
 }
